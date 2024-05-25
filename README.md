@@ -1,1 +1,0 @@
-# web-gis-pemetaan-sekolah

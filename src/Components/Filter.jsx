@@ -1,39 +1,50 @@
 // src/components/Filter.js
-import React from 'react';
-import './Filter.css'; // Import file CSS untuk gaya kustom
+import React from "react";
+import "./Filter.css"; // Import file CSS untuk gaya kustom
 
-const Filter = ({ 
-  kecamatanOptions, 
-  bentukOptions, 
+const Filter = ({
+  kecamatanOptions,
+  bentukOptions,
   statusOptions,
-  selectedKecamatan, 
-  setSelectedKecamatan, 
-  selectedBentuk, 
+  selectedKecamatan,
+  setSelectedKecamatan,
+  selectedBentuk,
   setSelectedBentuk,
   selectedStatus,
-  setSelectedStatus
+  setSelectedStatus,
 }) => {
   return (
-    <div className="filter-container">
-      <h4 className="filter-heading">Filter Sekolah</h4>
+    <div className="filter-container flex flex-row sm:w-full">
       <div className="filter-section">
         <label className="filter-label">
           Kecamatan:
-          <select className="filter-select" value={selectedKecamatan} onChange={e => setSelectedKecamatan(e.target.value)}>
+          <select
+            className="filter-select"
+            value={selectedKecamatan}
+            onChange={(e) => setSelectedKecamatan(e.target.value)}
+          >
             <option value="">Semua</option>
             {kecamatanOptions.map((kec, index) => (
-              <option key={index} value={kec}>{kec}</option>
+              <option key={index} value={kec}>
+                {kec}
+              </option>
             ))}
           </select>
         </label>
       </div>
       <div className="filter-section">
         <label className="filter-label">
-          Bentuk Sekolah:
-          <select className="filter-select" value={selectedBentuk} onChange={e => setSelectedBentuk(e.target.value)}>
+          Tingkat Sekolah:
+          <select
+            className="filter-select"
+            value={selectedBentuk}
+            onChange={(e) => setSelectedBentuk(e.target.value)}
+          >
             <option value="">Semua</option>
             {bentukOptions.map((bentuk, index) => (
-              <option key={index} value={bentuk}>{bentuk}</option>
+              <option key={index} value={bentuk}>
+                {bentuk}
+              </option>
             ))}
           </select>
         </label>
@@ -41,10 +52,16 @@ const Filter = ({
       <div className="filter-section">
         <label className="filter-label">
           Status Sekolah:
-          <select className="filter-select" value={selectedStatus} onChange={e => setSelectedStatus(e.target.value)}>
+          <select
+            className="filter-select"
+            value={selectedStatus}
+            onChange={(e) => setSelectedStatus(e.target.value)}
+          >
             <option value="">Semua</option>
             {statusOptions.map((status, index) => (
-              <option key={index} value={status.value}>{status.label}</option>
+              <option key={index} value={status.value}>
+                {status.label}
+              </option>
             ))}
           </select>
         </label>

@@ -1,33 +1,43 @@
 /* src/components/Filter.css */
 .filter-container {
-    display: flex; /* Mengatur tata letak menjadi flex */
-    flex-direction: row; /* Mengatur arah menjadi baris */
-    padding: 8px;
-    background-color: #f8f9fa;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
+  position: absolute;
+  width: 80%;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  align-items: center; /* Add this to center items horizontally */
 }
 
 .filter-heading {
-    margin-top: 0;
-    margin-bottom: 8px;
-    font-size: 16px;
-    margin-right: 8px;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 16px;
+  margin-right: 8px;
 }
 
 .filter-section {
-    margin-right: 10px; /* Menambahkan jarak antar bagian */
+  margin: auto;
+  width: 95%;
 }
 
 .filter-label {
-    display: block;
-    margin-bottom: 3px; /* Kurangi margin */
-    font-weight: bold;
+  display: block;
+  padding: 4px;
+  margin-bottom: 3px; /* Kurangi margin */
+  font-weight: bold;
 }
 
 .filter-select {
-    width: 100%;
-    padding: 6px; /* Kurangi padding */
-    border: 1px solid #ced4da;
-    border-radius: 3px;
+  width: 100%;
+  padding: 6px; /* Kurangi padding */
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  font-weight: normal;
+  margin-top: 5px;
 }
